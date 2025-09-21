@@ -1,4 +1,3 @@
-'Alumnos': ["Carlos","Ana","Daniela","Martin"],
 dic_ejemplo = {
     'Alumnos': ["Carlos", "Ana", "Daniela", "Martín"],
     'Curso': "Big Data",
