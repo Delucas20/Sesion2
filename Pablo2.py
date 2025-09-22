@@ -9,15 +9,10 @@ setpresencial = set(dic_ejemplo['Presencial'])
 print(setnumAlumnos)
 print(len(setnumAlumnos))
 print(setpresencial)
-# Mostrar cantidad de alumnos presenciales y remotos
-presenciales = dic_ejemplo['Presencial'].count(True)
-remotos = dic_ejemplo['Presencial'].count(False)
-print("Alumnos presenciales: {presenciales}")
-print("Alumnos remotos: {remotos}")
-
-# Mostrar nombres según modalidad
-for alumno, presencial in zip(dic_ejemplo['Alumnos'], dic_ejemplo['Presencial']):
-    if presencial:
-        print("{alumno} es presencial")
-    else:
-        print("{alumno} es remoto")
+# Mostrar alumnos según modalidad
+alumnos = dic_ejemplo['Alumnos']
+presencialidad = dic_ejemplo['Presencial']
+presenciales = [alumnos[i] for i in range(len(alumnos)) if presencialidad[i]]
+remotos = [alumnos[i] for i in range(len(alumnos)) if not presencialidad[i]]
+print(f"Alumnos presenciales: {presenciales}")
+print(f"Alumnos remotos: {remotos}")
